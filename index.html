@@ -87,7 +87,38 @@
       </div>
     </div>
   </header>
+<header class="fixed top-0 left-0 right-0 z-50 bg-white/70 dark:bg-gray-900/70 backdrop-blur-lg">
+  <div class="max-w-7xl mx-auto px-4 flex justify-between items-center py-3">
+    <h1 class="text-lg font-bold">Jayant Lohar</h1>
 
+    <!-- Desktop Nav -->
+    <nav class="hidden md:flex gap-6">
+      <a href="#about" class="hover:text-blue-500">About</a>
+      <a href="#skills" class="hover:text-blue-500">Skills</a>
+      <a href="#projects" class="hover:text-blue-500">Projects</a>
+      <a href="#contact" class="hover:text-blue-500">Contact</a>
+    </nav>
+
+    <!-- Mobile Hamburger -->
+    <button id="menuToggle" class="md:hidden focus:outline-none">
+      <i data-lucide="menu" class="w-6 h-6"></i>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <nav id="mobileMenu" class="hidden flex-col bg-white dark:bg-gray-900 px-6 pb-4 md:hidden">
+    <a href="#about" class="py-2 border-b">About</a>
+    <a href="#skills" class="py-2 border-b">Skills</a>
+    <a href="#projects" class="py-2 border-b">Projects</a>
+    <a href="#contact" class="py-2">Contact</a>
+  </nav>
+</header>
+
+<script>
+  document.getElementById("menuToggle").addEventListener("click", () => {
+    document.getElementById("mobileMenu").classList.toggle("hidden");
+  });
+</script>
   <main id="home" class="pt-28">
     <!-- ===== Hero ===== -->
     <section class="relative overflow-hidden">
@@ -121,23 +152,24 @@
             </div>
           </div>
           <div class="md:col-span-5 relative" data-aos="fade-left">
-            <div class="aspect-square rounded-3xl overflow-hidden shadow-2xl ring-1 ring-gray-200/60 dark:ring-gray-800/80 glass dark:glass-dark">
-              <div class="absolute inset-0 bg-gradient-to-br from-indigo-500/10 via-fuchsia-500/10 to-cyan-500/10"></div>
-              <div class="h-full w-full grid place-items-center">
-                <img src="myimage.jpg" alt="Jayant Lohar" class="size-40 md:size-48 rounded-2xl object-cover shadow-xl animate-floaty">
-              </div>
-            </div>
-            <div class="absolute -bottom-6 -left-6 hidden md:block" data-aos="zoom-in" data-aos-delay="200">
-              <div class="rounded-2xl px-4 py-3 bg-white/80 dark:bg-gray-900/80 border border-gray-200/70 dark:border-gray-800/70 shadow-lg">
-                <div class="text-xs text-gray-600 dark:text-gray-300">Current Role</div>
-                <div class="font-semibold">Assistant Professor – Asia Pacific Institute of Hotel Management</div>
-                <div class="text-xs text-gray-500">Feb 2025 – Present</div>
-              </div>
-            </div>
+  <div class="aspect-square rounded-3xl overflow-hidden shadow-2xl ring-1 ring-gray-200/60 dark:ring-gray-800/80 glass dark:glass-dark">
+    <div class="h-full w-full grid place-items-center">
+      <img src="photo.jpg" alt="Jayant Lohar" class="h-full w-full object-cover">
+    </div>
+  </div>
+  <div class="absolute -bottom-6 -left-6 hidden md:block" data-aos="zoom-in" data-aos-delay="200">
+    <div class="rounded-2xl px-4 py-3 bg-white/80 dark:bg-gray-900/80 border border-gray-200/70 dark:border-gray-800/70 shadow-lg">
+      <div class="text-xs text-gray-600 dark:text-gray-300">Current Role</div>
+      <div class="font-semibold">Assistant Professor – Asia Pacific Institute of Hotel Management</div>
+      <div class="text-xs text-gray-500">Feb 2025 – Present</div>
+    </div>
+  </div>
+</div>
+
+
           </div>
         </div>
       </div>
-
       <!-- ===== Live scrolling skills marquee ===== -->
       <div class="relative py-6 border-y border-gray-200/70 dark:border-gray-800/70 overflow-hidden">
         <div class="marquee-track animate-marquee">
@@ -242,7 +274,7 @@
           <li class="relative" data-aos="fade-up" data-aos-delay="100">
             <div class="md:grid md:grid-cols-12 md:gap-8 items-start">
               <div class="md:col-span-5 md:text-right">
-                <div class="text-sm text-gray-500">2023 – Present</div>
+                <div class="text-sm text-gray-500">2023 – Feb 2025</div>
                 <div class="font-semibold">Assistant Professor</div>
                 <div class="text-sm">Magarpatta College of Hospitality, Pune</div>
               </div>
@@ -452,3 +484,4 @@
   </script>
 </body>
 </html>
+
