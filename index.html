@@ -120,16 +120,16 @@
   });
 </script>
   <main id="home" class="pt-28">
-    <!-- ===== Hero ===== -->
-    <section id="hero" class="relative overflow-hidden pt-16">
+  <!-- Hero Section -->
+<section id="hero" class="relative overflow-hidden pt-24 md:pt-16"> <!-- Added pt-24 for mobile to avoid overlap with navbar -->
   <!-- Background Grid -->
   <div class="absolute inset-0 grid-bg opacity-40 dark:opacity-30"></div>
 
   <div class="mx-auto max-w-7xl px-4 py-16 md:py-24 flex flex-col-reverse md:flex-row items-center gap-8">
     
     <!-- Text Section -->
-    <div class="md:w-7/12 space-y-4" data-aos="fade-right">
-      <div class="inline-flex items-center gap-2 rounded-full border border-gray-200/70 dark:border-gray-800/70 bg-white/60 dark:bg-gray-900/60 px-3 py-1 text-xs mb-4">
+    <div class="md:w-7/12 space-y-4 text-center md:text-left" data-aos="fade-right">
+      <div class="inline-flex items-center gap-2 rounded-full border border-gray-200/70 dark:border-gray-800/70 bg-white/60 dark:bg-gray-900/60 px-3 py-1 text-xs mb-4 justify-center md:justify-start">
         <i data-lucide="badge-check" class="size-4"></i>
         <span>Assistant Professor · Hospitality</span>
       </div>
@@ -141,11 +141,11 @@
         </span>
       </h1>
 
-      <p class="mt-5 text-gray-600 dark:text-gray-300 text-base sm:text-lg md:text-xl max-w-lg">
+      <p class="mt-5 text-gray-600 dark:text-gray-300 text-base sm:text-lg md:text-xl max-w-lg mx-auto md:mx-0">
         Dedicated hospitality educator with a strong background in housekeeping, food production, and beverage management. Passionate about practical learning and professional growth.
       </p>
 
-      <div class="mt-6 flex flex-wrap items-center gap-2 sm:gap-3">
+      <div class="mt-6 flex flex-wrap items-center gap-2 sm:gap-3 justify-center md:justify-start">
         <a href="mailto:loharj79@gmail.com" class="rounded-xl px-4 py-2 bg-gray-900 text-white dark:bg-white dark:text-gray-900 hover:opacity-90 transition inline-flex items-center gap-2">
           <i data-lucide="mail" class="size-4"></i>Email
         </a>
@@ -162,8 +162,8 @@
     </div>
 
     <!-- Image Section -->
-    <div class="md:w-5/12 flex justify-center relative" data-aos="fade-left">
-      <div class="aspect-square w-40 sm:w-56 md:w-full rounded-3xl overflow-hidden shadow-2xl ring-1 ring-gray-200/60 dark:ring-gray-800/80 glass dark:glass-dark">
+    <div class="md:w-5/12 flex justify-center relative mb-8 md:mb-0" data-aos="fade-left">
+      <div class="aspect-square w-56 sm:w-72 md:w-full rounded-3xl overflow-hidden shadow-2xl ring-1 ring-gray-200/60 dark:ring-gray-800/80 glass dark:glass-dark">
         <img src="photo.jpg" alt="Jayant Lohar" class="h-full w-full object-cover">
       </div>
 
@@ -177,11 +177,32 @@
       </div>
     </div>
   </div>
+</section>
 
+<!-- Mobile Hamburger Menu -->
+<nav class="md:hidden fixed top-4 right-4 z-50">
+  <button id="menu-btn" class="p-2 rounded-lg bg-gray-900 dark:bg-white text-white dark:text-gray-900 shadow-lg">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 6h16M4 12h16M4 18h16"></path>
+    </svg>
+  </button>
+  <div id="mobile-menu" class="hidden absolute right-0 mt-2 w-48 bg-white dark:bg-gray-900 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 py-2">
+    <a href="#hero" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800">Home</a>
+    <a href="#about" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800">About</a>
+    <a href="#projects" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800">Projects</a>
+    <a href="#contact" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800">Contact</a>
+  </div>
+</nav>
 
-          </div>
-        </div>
-      </div>
+<script>
+  const btn = document.getElementById('menu-btn');
+  const menu = document.getElementById('mobile-menu');
+
+  btn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+</script>
+
       <!-- ===== Live scrolling skills marquee ===== -->
       <div class="relative py-6 border-y border-gray-200/70 dark:border-gray-800/70 overflow-hidden">
         <div class="marquee-track animate-marquee">
@@ -496,5 +517,6 @@
   </script>
 </body>
 </html>
+
 
 
